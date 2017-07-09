@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment -->
+<html class="csstransforms csstransforms3d csstransitions sb-init wf-fftisawebpro-n7-active wf-fftisawebpro-i4-active wf-fftisawebpro-n4-active wf-freightsanspro-n7-active wf-fftisawebpro-i7-active wf-freightsanspro-n4-active wf-freightsanspro-i4-active wf-freightsanspro-i7-active wf-freightsanspro-n3-active wf-freightsanspro-i3-active wf-freightsanspro-n5-active wf-freightsanspro-i5-active wf-freightsanspro-n6-active wf-freightsanspro-i6-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/9a6a49e4f0"></script><script src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/nr-974.min.js"></script><script id="twitter-wjs" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/widgets.js"></script><script type="text/javascript" async="" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/ga.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9a6a49e4f0","applicationID":"2607212","transactionName":"JwtXQEMLWF1SRU5aWAkBFkdZC0M=","queueTime":3,"applicationTime":9,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District Data Labs - Creating a Hadoop Pseudo-Distributed Environment</title>
+<meta name="description" content="Creating a Hadoop Pseudo-Distributed Environment">
+<meta name="author" content="District Data Labs">
+<meta name="keywords" content="blog, blogging, blogging platform, self-hosted, self-hosted blogging, subscription blog, subscription blog platform, simple blog, simple blogging platform, minimalist blog, minimalist blogging, minimalist blogging platform, minimalist blog site, no-nonsense blogging, easy blog site, programmer blog, programmer blogging sites, programmer blog platform, web developer blogs, web developer blogging platform, blogging for programmers, blogging for web developers, travel blogging, general blogging, tech blogging, tech blogging platform">
+
+  <!-- Do a conditional here to test for the theme selected in settings.-->
+  <link href="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/kaia_theme-89a9cba6e676424d9cf0c95b0224d95d.css" media="all" rel="stylesheet" type="text/css">
+
+<script src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/application-f45b3721cd1a2c47cd76e37f01c02031.js" type="text/javascript"></script><style type="text/css"></style>
+
+    <script type="text/javascript" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/irt2lpm.js"></script>
+    <link rel="shortcut icon" href="https://silvrback.s3.amazonaws.com/uploads/setting/favicon/2838/95ed9e0f36688c57d8124ce913a8edc5.ico">
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        //handles all back end tracking, and silvrback home tracking
+
+        //pushes stats to user account, with either custom domain or subdomain. One or the other, not both. If custom domain is set, then silvrback subdomain tracking won't show for user.
+        _gaq.push(['user._setAccount', 'UA-47245418-1']);
+        _gaq.push(['user._setDomainName', 'blog.districtdatalabs.com']);
+        _gaq.push(['user._setAllowLinker', true]);
+        _gaq.push(['user._trackPageview']);
+
+        //Send tracking data to 3rd profile. Tracks all front end user domain data (custom domains and subdomains)
+        _gaq.push(['custom._setAccount', 'UA-43290725-3']);
+        _gaq.push(['custom._setDomainName', 'blog.districtdatalabs.com']);
+        _gaq.push(['custom._setAllowLinker', true]);
+        _gaq.push(['custom._trackPageview']);
+
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+  <link href="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/font-awesome.css" rel="stylesheet">
+
+  <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+  <style type="text/css">.tk-ff-tisa-web-pro{font-family:"ff-tisa-web-pro",serif;}.tk-freight-sans-pro{font-family:"freight-sans-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:ff-tisa-web-pro;src:url(https://fonts.typekit.net/af/85938d/00000000000000000001707c/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:ff-tisa-web-pro;src:url(https://fonts.typekit.net/af/354473/00000000000000000001707d/27/l?subset_id=2&fvd=i7) format("woff2");font-weight:700;font-style:italic;}@font-face{font-family:ff-tisa-web-pro;src:url(https://fonts.typekit.net/af/851cae/000000000000000000017080/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:ff-tisa-web-pro;src:url(https://fonts.typekit.net/af/9d5abb/000000000000000000017087/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/3b068a/000000000000000000010b5a/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/d3755d/000000000000000000010b5b/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/58d56b/000000000000000000010b60/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/8d0db2/000000000000000000010b61/27/l?subset_id=2&fvd=i7) format("woff2");font-weight:700;font-style:italic;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/38580f/000000000000000000010b58/27/l?subset_id=2&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/58b7ff/000000000000000000010b59/27/l?subset_id=2&fvd=i3) format("woff2");font-weight:300;font-style:italic;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/03d4ad/000000000000000000010b5c/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/ff10a4/000000000000000000010b5d/27/l?subset_id=2&fvd=i5) format("woff2");font-weight:500;font-style:italic;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/8ac0b0/000000000000000000010b5e/27/l?subset_id=2&fvd=n6) format("woff2");font-weight:600;font-style:normal;}@font-face{font-family:freight-sans-pro;src:url(https://fonts.typekit.net/af/e8560e/000000000000000000010b5f/27/l?subset_id=2&fvd=i6) format("woff2");font-weight:600;font-style:italic;}</style><script type="text/javascript">try {
+      Typekit.load();
+  } catch (e) {
+  }</script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="BWuTq8tkBb8DP5kPdpUTAJMMZuvT4m59/SRgRx25xv8=" name="csrf-token">
+    <meta property="og:url" content="https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment">
+  <meta property="og:title" content="District Data Labs - Creating a Hadoop Pseudo-Distributed Environment">
+  <meta property="og:description" content="Creating a Hadoop Pseudo-Distributed Environment">
+    <meta property="og:image" content="https://silvrback.s3.amazonaws.com/uploads/0ad1f704-2113-4ba1-9b4c-4076f176328f/DDL%20Square%20Logo%20-%20Dark_large.png">
+    <meta property="og:image:width" content="450">
+
+    <meta property="og:image:height" content="298">
+  <style>
+    .theme_wrapper {
+          background-color: #242729;
+        }
+        .header_background_text {
+          color: #fff;
+        }
+        .header_background_text > ul > li >a {
+          color: #fff;
+        }
+  </style>
+  <style>
+    .hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+      .highlight {
+        background-color: #f8f8f8;
+      }
+  </style>
+        <style>
+            .shade {
+                opacity: 0.55;
+            }
+        </style>
+
+
+  <link href="https://districtdatalabs.silvrback.com/feed" rel="alternate" title="ATOM" type="application/atom+xml">
+  <link href="https://districtdatalabs.silvrback.com/feed.rss" rel="alternate" title="RSS" type="application/rss+xml">
+<script type="text/javascript" async="" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/embed.js"></script><script async="" type="text/javascript" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/count.js"></script><script src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/count-data.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">.MathJax_Preview .MJXc-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><style type="text/css">.MJXc-script {font-size: .8em}
+.MJXc-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXc-bold {font-weight: bold}
+.MJXc-italic {font-style: italic}
+.MJXc-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-largeop {font-size: 150%}
+.MJXc-largeop.MJXc-int {vertical-align: -.2em}
+.MJXc-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXc-display {display: block; text-align: center; margin: 1em 0}
+.MJXc-math span {display: inline-block}
+.MJXc-box {display: block!important; text-align: center}
+.MJXc-box:after {content: " "}
+.MJXc-rule {display: block!important; margin-top: .1em}
+.MJXc-char {display: block!important}
+.MJXc-mo {margin: 0 .15em}
+.MJXc-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXc-denom {display: inline-table!important; width: 100%}
+.MJXc-denom > * {display: table-row!important}
+.MJXc-surd {vertical-align: top}
+.MJXc-surd > * {display: block!important}
+.MJXc-script-box > *  {display: table!important; height: 50%}
+.MJXc-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXc-script-box > *:last-child > * {vertical-align: bottom}
+.MJXc-script-box > * > * > * {display: block!important}
+.MJXc-mphantom {visibility: hidden}
+.MJXc-munderover {display: inline-table!important}
+.MJXc-over {display: inline-block!important; text-align: center}
+.MJXc-over > * {display: block!important}
+.MJXc-munderover > * {display: table-row!important}
+.MJXc-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXc-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXc-mtr {display: table-row!important}
+.MJXc-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXc-mtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-mlabeledtr {display: table-row!important}
+.MJXc-mlabeledtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mlabeledtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXc-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXc-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXc-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXc-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXc-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXc-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXc-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXc-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXc-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXc-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_CHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script></head>
+<body class="home show"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+<!-- conditional here for the theme body -->
+<div id="sb-site" style="min-height: 781px;"><script src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/MathJax.js" type="text/javascript"></script><article class="theme_wrapper">
+  <!--for user uploaded background pics-->
+  <div class="banner_container">
+      <img alt="Blog_background_large" class="user_banner animated fadeInDown" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/blog_background_large.jpg" style="display: block;">
+</div>
+<div class="shade" style="display:block"></div>
+
+
+
+  <div class="kaia_page" style="position:relative; z-index:10">
+    <div class="big_article_header">
+      <h1 class="kaia_header_title header_background_text">Creating a Hadoop Pseudo-Distributed Environment</h1>
+
+      <div class="pic_and_name">
+        <div class="name_link">
+               <a href="http://blog.districtdatalabs.com/" class="header_background_text">Benjamin Bengfort and Jenny Kim</a> 
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article_body theme2_body">      
+    <div class="kaia_page">
+      <div class="article_padding theme2_content">
+        <div class="all_external_links">
+          <p>Hadoop developers usually test their scripts and code on a <em>pseudo-distributed environment</em> (also known as a <em>single node setup</em>), which is a virtual machine that runs all of the Hadoop daemons simultaneously on a single machine. This allows you to quickly write scripts and test them on limited data sets without having to connect to a remote cluster or pay the expense of EC2. If you're learning Hadoop, you'll probably also want to set up a pseudo-distributed environment to facilitate your understanding of the various Hadoop daemons.</p>
+
+<p>These instructions will help you install a pseudo-distributed environment with <em>Hadoop 2.5.2</em> on <em>Ubuntu 14.04</em>.</p>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<p>There are a couple of options that will allow you to quickly get up and running if you are not familiar with systems administration on Linux or do not wish to work through the process of installing Hadoop yourself. District Data Labs has provided a Virtual Machine Disk (VMDK) configured exactly as the instructions below, available for you to download directly. You can then use this VMDK in the virtualization software of your choice (e.g. VirtualBox or VMWare Fusion). Alternatively both Hortonworks and Cloudera supply virtual machines for quick download. Be aware that if you do use Cloudera or Hortonworks distributions, then the environment may be subtly different than the one described below.</p>
+
+<p>Click <a href="http://bit.ly/hfpd3vm" target="_blank">here</a> to download the VMDK we have put together.</p>
+
+<p>If you are using the VMDK supplied by District Data Labs, log in to the machine using the username and password as follows:</p>
+
+<p>username: student<br>
+    password: password</p>
+
+<p>If you're brave enough to set up the environment yourself, go ahead and move to the next section!</p>
+
+<h2 id="setting-up-linux">Setting up Linux</h2>
+
+<p>Before you can get started installing Hadoop, you'll need to have a Linux environment configured and ready to use. These instructions assume that you can get an Ubuntu 14.04 distribution installed on the machine of your choice, either in a dual booted configuration or using a virtual machine. Using Ubuntu Server or Ubuntu Desktop is left to your preference, since you'll also need to be familiar working with the command line. Personally, I prefer to use Ubuntu Server since it's more lightweight, and SSH into it from my host operating system.</p>
+
+<p><strong>Base Environment</strong>: Ubuntu x64 Desktop 14.04 LTS</p>
+
+<p>Make sure your system is fully up-to-date with the required by running the following commands:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade
+~<span class="nv">$ </span>sudo apt-get install build-essential ssh lzop git rsync curl
+~<span class="nv">$ </span>sudo apt-get install python-dev python-setuptools
+~<span class="nv">$ </span>sudo apt-get install libcurl4-openssl-dev
+~<span class="nv">$ </span>sudo easy_install pip
+~<span class="nv">$ </span>sudo pip install virtualenv virtualenvwrapper python-dateutil
+</pre></div>
+<h3 id="creating-a-hadoop-user">Creating a Hadoop User</h3>
+
+<p>In order to secure our Hadoop services, we will make sure that Hadoop is run as a Hadoop-specific user and group. This user would be able to initiate SSH connections to other nodes in a cluster, but not have administrative access to do damage to the operating system upon which the service was running. Implementing Linux permissions also helps secure HDFS and is the start of preparing a secure computing cluster.</p>
+
+<p>This tutorial is not meant for operational implementation. However, as a data scientist, these permissions may save you some headache in the long run, so it is helpful to have the permissions in place on your development environment. This will also ensure that the Hadoop installation is separate from other software applications and will help organize the maintenance of the machine.</p>
+
+<p>Create the <code>hadoop</code> user and group, then add the <code>student</code> user to the Hadoop group:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo addgroup hadoop
+~<span class="nv">$ </span>sudo useradd -m -g hadoop hadoop
+~<span class="nv">$ </span>sudo usermod -a -G hadoop student
+</pre></div>
+<p>Once you have logged out and logged back in (or restarted the machine) you should be able to see that you've been added to the Hadoop group by issuing the <code>groups</code> command. Note that the <code>-r</code> flag creates a system user without a home directory.</p>
+
+<h3 id="configuring-ssh">Configuring SSH</h3>
+
+<p><a href="http://en.wikipedia.org/wiki/Secure_Shell" target="_blank">SSH</a> is required and must be installed on your system to use Hadoop (and to better manage the virtual environment, especially if you're using a headless Ubuntu). Generate some ssh keys for the Hadoop user by issuing the following commands:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo su hadoop
+~<span class="nv">$ </span>ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/hadoop/.ssh/id_rsa<span class="o">)</span>:
+Created directory <span class="s1">'/home/hadoop/.ssh'</span>.
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+Enter same passphrase again:
+Your identification has been saved in /home/hadoop/.ssh/id_rsa.
+Your public key has been saved in /home/hadoop/.ssh/id_rsa.pub.
+<span class="o">[</span>... snip ...<span class="o">]</span>
+</pre></div>
+<p>Simply hit enter at all the prompts to accept the defaults and to create a key that does not require a password to authenticate (this is required for Hadoop). In order to allow the key to be used to SSH into the box, copy the public key to the <em>authorized_keys</em> file with the following command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>cat /home/hadoop/.ssh/id_rsa.pub &gt;&gt; /home/hadoop/.ssh/authorized_keys
+~<span class="nv">$ </span>chmod <span class="m">600</span> /home/hadoop/.ssh/authorized_keys
+</pre></div>
+<p>You should be able to download this key and use it to SSH into the Ubuntu environment. To test the SSH key issue the following command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>ssh -l hadoop localhost
+</pre></div>
+<p>If this completes successfully without asking you for a password, then you have successfully configured SSH for Hadoop. Exit the SSH window by typing <code>exit</code>. You should be returned back to the <code>hadoop</code> user. Exit the Hadoop user by typing <code>exit</code> again, you should now be in a terminal window that says <code>student@ubuntu</code>.</p>
+
+<h3 id="installing-java">Installing Java</h3>
+
+<p>Hadoop and most of the Hadoop ecosystem require Java to run. Hadoop requires a minimum of Oracle Java™ 1.6.x or greater and used to recommend particular versions of Java™ to use with Hadoop. Now, Hadoop maintains a reporting of the various JDKs that work well with Hadoop. Ubuntu does not maintain an Oracle JDK in Ubuntu repositories because it is proprietary code, so instead we will install OpenJDK. For more information on supported Java™ versions, see <a href="http://wiki.apache.org/hadoop/HadoopJavaVersions" target="_blank">Hadoop Java Versions</a> and for information about installing different versions on Ubuntu, please see <a href="https://help.ubuntu.com/community/Java" target="_blank">Installing Java on Ubuntu</a>.</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo apt-get install openjdk-7-*
+</pre></div>
+<p>Do a quick check to ensure the right version of Java™ is installed:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>java -version
+java version <span class="s2">"1.7.0_65"</span>
+OpenJDK Runtime Environment <span class="o">(</span>IcedTea 2.5.3<span class="o">)</span> <span class="o">(</span>7u71-2.5.3-0ubuntu0.14.04.1<span class="o">)</span>
+OpenJDK 64-Bit Server VM <span class="o">(</span>build 24.65-b04, mixed mode<span class="o">)</span>
+</pre></div>
+<p>Hadoop is currently built and tested on both OpenJDK and Oracle's JDK/JRE.</p>
+
+<h3 id="disabling-ipv6">Disabling IPv6</h3>
+
+<p>It has been reported for a while now that Hadoop running on Ubuntu has a conflict with IPv6, and ever since Hadoop 0.20, Ubuntu users have been disabling IPv6 on their clustered boxes. It is unclear whether or not this is still a bug in the latest versions of Hadoop, however in a single-node or pseudo-distributed environment we will have no need for IPv6, so it is best to simply disable it and not worry about any potential problems.</p>
+
+<p>Edit the <code>/etc/sysctl.conf</code> file by executing the following lines of code:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gksu gedit /etc/sysctl.conf
+</pre></div>
+<p>Then add the following lines to the end of the file:</p>
+<div class="highlight"><pre><span class="c"># disable ipv6</span>
+net.ipv6.conf.all.disable_ipv6 <span class="o">=</span> 1
+net.ipv6.conf.default.disable_ipv6 <span class="o">=</span> 1
+net.ipv6.conf.lo.disable_ipv6 <span class="o">=</span> 1
+</pre></div>
+<p>For this change to take effect, reboot your computer. Once it has rebooted check the status with the following command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+</pre></div>
+<p>If the output is 0, then IPv6 is enabled. If it is 1, then we have successfully disabled IPv6.</p>
+
+<h2 id="installing-hadoop">Installing Hadoop</h2>
+
+<p>To get Hadoop, you'll need to download the release of your choice from one of the <a href="http://www.apache.org/dyn/closer.cgi/hadoop/common/" target="_blank">Apache Download Mirrors</a>. These instructions will download the current stable version of Hadoop with YARN at the time of this writing, Hadoop 2.5.2.</p>
+
+<p>After you've selected a mirror, type the following commands into a Terminal window, replacing <code>http://apache.mirror.com/hadoop-2.5.0/</code> with the mirror URL that you selected and that is best for your region:</p>
+<div class="highlight"><pre>~/Downloads<span class="nv">$ </span>curl -O http://apache.mirror.com/hadoop-2.5.2/hadoop-2.5.2.tar.gz
+</pre></div>
+<p>You can verify the download by ensuring that the <code>md5sum</code> matches the md5sum which should also be available at the mirror:</p>
+<div class="highlight"><pre>~/Downloads<span class="nv">$ </span>md5sum hadoop-2.5.2.tar.gz
+74a7581893a8224540a9417a4c2630da  hadoop-2.5.2.tar.gz
+</pre></div>
+<p>Of course, you can use any mechanism you wish to download Hadoop - <code>wget</code> or a browser will work just fine.</p>
+
+<h3 id="unpacking">Unpacking</h3>
+
+<p>After obtaining the compressed tarball, the next step is to unpack it. You can use an Archive Manager or simply follow the instructions that follow next. The most significant decision that you have to make is where to unpack Hadoop to.</p>
+
+<p>The Linux operating system depends upon a hierarchical directory structure to function. At the root, many directories that you've heard of have specific purposes:</p>
+
+<ul>
+<li><code>/etc</code> is used to store configuration files</li>
+<li><code>/home</code> is used to store user specific files</li>
+<li> <code>/bin</code> and <code>/sbin</code> include programs that are vital for the OS</li>
+<li><code>/usr/sbin</code> are for programs that are not vital but are system wide</li>
+<li><code>/usr/local</code> is for locally installed programs</li>
+<li><code>/var</code> is used for program data including caches and logs</li>
+</ul>
+
+<p>You can read more about these directories in <a href="http://serverfault.com/questions/96416/should-i-install-linux-applications-in-var-or-opt" target="_blank">this Stack Exchange post</a>.</p>
+
+<p>A good choice to move Hadoop to is the <code>/opt</code> and <code>/srv</code> directories.</p>
+
+<ul>
+<li><code>/opt</code> contains non-packaged programs, usually source. A lot of developers stick their code there for deployments.</li>
+<li>The <code>/srv</code> directory stands for services. Hadoop, HBase, Hive and others run as services on your machine, so this seems like a great place to put things, and it's a standard location that's easy to get to. So let's stick everything there!</li>
+</ul>
+
+<p>Enter the following commands:</p>
+<div class="highlight"><pre>~/Downloads<span class="nv">$ </span>tar -xzf hadoop-2.5.2.tar.gz
+~/Downloads<span class="nv">$ </span>sudo mv hadoop-2.5.2 /srv/
+~/Downloads<span class="nv">$ </span>sudo chown -R hadoop:hadoop /srv/hadoop-2.5.2
+~/Downloads<span class="nv">$ </span>sudo chmod g+w -R /srv/hadoop-2.5.2
+~/Downloads<span class="nv">$ </span>sudo ln -s /srv/hadoop-2.5.2 /srv/hadoop
+</pre></div>
+<p>These commands unpack Hadoop, move it to the service directory where we will keep all of our Hadoop and cluster services, and then set permissions. Finally, we create a <code>symlink</code> to the version of Hadoop that we would like to use, this will make it easy to upgrade our Hadoop distribution in the future.</p>
+
+<h3 id="environment">Environment</h3>
+
+<p>In order to ensure everything executes correctly, we are going to set some environment variables so that Hadoop executes in its correct context. Enter the following command on the command line to open up a text editor with the profile of the <code>hadoop</code> user to change the environment variables.</p>
+<div class="highlight"><pre>/srv<span class="nv">$ </span>gksu gedit /home/hadoop/.bashrc
+</pre></div>
+<p>Add the following lines to this file:</p>
+<div class="highlight"><pre><span class="c"># Set the Hadoop Related Environment variables</span>
+<span class="nb">export </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/srv/hadoop
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/bin
+
+<span class="c"># Set the JAVA_HOME</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-7-openjdk-amd64
+</pre></div>
+<p>We'll also add some convenience functionality to the student user environment. Open the student user bash profile file with the following command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gedit ~/.profile
+</pre></div>
+<p>Add the following contents to that file:</p>
+<div class="highlight"><pre><span class="c"># Set the Hadoop Related Environment variables</span>
+<span class="nb">export </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/srv/hadoop
+<span class="nb">export </span><span class="nv">HADOOP_STREAMING</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/share/hadoop/tools/lib/hadoop streaming-2.5.2.jar
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/bin
+
+<span class="c"># Set the JAVA_HOME</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-7-openjdk-amd64
+
+<span class="c"># Helpful Aliases</span>
+<span class="nb">alias</span> ..<span class="o">=</span><span class="s2">"cd .."</span>
+<span class="nb">alias</span> ...<span class="o">=</span><span class="s2">"cd ../.."</span>
+<span class="nb">alias </span><span class="nv">hfs</span><span class="o">=</span><span class="s2">"hadoop fs"</span>
+<span class="nb">alias </span><span class="nv">hls</span><span class="o">=</span><span class="s2">"hfs -ls"</span>
+</pre></div>
+<p>These simple aliases may save you a lot of typing in the long run! Feel free to add any other helpers that you think might be useful in your development work.</p>
+
+<p>Check that your environment configuration has worked by running a Hadoop command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>hadoop version
+Hadoop 2.5.2
+Subversion https://git-wip-us.apache.org/repos/asf/hadoop.git -r cc72e9b000545b86b75a61f4835eb86d57bfafc0
+Compiled by jenkins on 2014-11-14T23:45Z
+Compiled with protoc 2.5.0
+From <span class="nb">source </span>with checksum df7537a4faa4658983d397abf4514320
+This <span class="nb">command </span>was run using /srv/hadoop-2.5.2/share/hadoop/common/hadoop-common-2.5.2.jar
+</pre></div>
+<p>If that ran with no errors and displayed an output similar to the one above, then everything has been configured correctly up to this point.</p>
+
+<h3 id="hadoop-configuration">Hadoop Configuration</h3>
+
+<p>The penultimate step to setting up Hadoop as a pseudo-distributed node is to edit configuration files for the Hadoop environment, the MapReduce site, the HDFS site, and the YARN site. This will mostly entail configuration file editing.</p>
+
+<p>Edit the <em>hadoop-env.sh</em> file by entering the following on the command line.</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gedit <span class="nv">$HADOOP_HOME</span>/etc/hadoop/hadoop-env.sh
+</pre></div>
+<p>The most important part of this configuration is to change the following line:</p>
+<div class="highlight"><pre><span class="c"># The java implementation to use.</span>
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-7-openjdk-amd64
+</pre></div>
+<p>Next, edit the core site configuration file:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gedit <span class="nv">$HADOOP_HOME</span>/etc/hadoop/core-site.xml
+</pre></div>
+<p>Replace the <code>&lt;configuration&gt;&lt;/configuration&gt;</code> with the following:</p>
+<div class="highlight"><pre>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.default.name&lt;/name&gt;
+        &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+        &lt;value&gt;/var/app/hadoop/data&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</pre></div>
+<p>Edit the MapReduce site configuration following by copying the template then opening the file for editing:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>cp <span class="nv">$HADOOP_HOME</span>/etc/hadoop/mapred-site.xml.template <span class="se">\</span>
+      <span class="nv">$HADOOP_HOME</span>/etc/hadoop/mapred-site.xml
+~<span class="nv">$ </span>gedit <span class="nv">$HADOOP_HOME</span>/etc/hadoop/mapred-site.xml
+</pre></div>
+<p>Replace the <code>&lt;configuration&gt;&lt;/configuration&gt;</code> with the following:</p>
+<div class="highlight"><pre>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+        &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</pre></div>
+<p>Now edit the HDFS site configuration by editing the following file:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gedit <span class="nv">$HADOOP_HOME</span>/etc/hadoop/hdfs-site.xml
+</pre></div>
+<p>Replace the <code>&lt;configuration&gt;&lt;/configuration&gt;</code> with the following:</p>
+<div class="highlight"><pre>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</pre></div>
+<p>Finally, edit the YARN site configuration file:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>gedit <span class="nv">$HADOOP_HOME</span>/etc/hadoop/yarn-site.xml
+</pre></div>
+<p>And update the configuration as follows:</p>
+<div class="highlight"><pre>&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services.mapreduce_shuffle.class&lt;/name&gt;
+        &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
+        &lt;value&gt;localhost:8025&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
+        &lt;value&gt;localhost:8030&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
+        &lt;value&gt;localhost:8050&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</pre></div>
+<p>With these files edited, Hadoop should be fully configured as a pseudo-distributed environment.</p>
+
+<h3 id="formatting-the-namenode">Formatting the Namenode</h3>
+
+<p>The final step before we can turn Hadoop on is to format the namenode. The namenode is in charge of HDFS, the distributed file system. The namenode on this machine is going to keep its files in the <code>/var/app/hadoop/data</code> directory. We need to initialize this directory and then format the namenode to properly use it.</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo mkdir -p /var/app/hadoop/data
+~<span class="nv">$ </span>sudo chown hadoop:hadoop -R /var/app/hadoop
+~<span class="nv">$ </span>sudo su hadoop
+~<span class="nv">$ </span>hadoop namenode -format
+</pre></div>
+<p>You should see a bunch of Java messages scrolling down the page if the namenode has executed successfully. There should be directories inside of the <code>/var/app/hadoop/data</code> directory, including a <code>dfs</code> directory. If that is what you see, then Hadoop should be all set up and ready to use!</p>
+
+<h3 id="starting-hadoop">Starting Hadoop</h3>
+
+<p>At this point we can start and run our Hadoop daemons. When you formatted the namenode, you switched to being the <code>hadoop</code> user with the <code>sudo su hadoop</code> command. If you're still that user, go ahead and execute the following commands:</p>
+<div class="highlight"><pre>~<span class="nv">$ $HADOOP_HOME</span>/sbin/start-dfs.sh
+~<span class="nv">$ $HADOOP_HOME</span>/sbin/start-yarn.sh
+</pre></div>
+<p>The daemons should start up and issue messages about where they are logging to and other important information. If you get asked about your SSH key, just type <code>y</code> at the prompt. You can see the processes that are running via the <code>jps</code> command:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>jps
+<span class="m">4801</span> Jps
+<span class="m">4468</span> ResourceManager
+<span class="m">4583</span> NodeManager
+<span class="m">4012</span> NameNode
+<span class="m">4318</span> SecondaryNameNode
+<span class="m">4150</span> DataNode
+</pre></div>
+<p>If the processes are not running, then something has gone wrong. You can also access the Hadoop cluster administration site by opening a browser and point it to <a href="http://localhost:8088/" target="_blank">http://localhost:8088</a>. This should bring up a page with the Hadoop logo and a table of applications.</p>
+
+<p>To wrap up the configuration, prepare a space on HDFS for our <code>student</code> account to store data and to run analytical jobs on:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>hadoop fs -mkdir -p /user/student
+~<span class="nv">$ </span>hadoop fs -chown student:student /user/student
+</pre></div>
+<p>You can now exit from the <code>hadoop</code> user's shell with the <code>exit</code> command.</p>
+
+<h3 id="restarting-hadoop">Restarting Hadoop</h3>
+
+<p>If you reboot your machine, the Hadoop daemons will stop running and will not automatically be restarted. If you are attempting to run a Hadoop command and you get a "connection refused" message, it is likely because the daemons are not running. You can check this by issuing the <code>jps</code> command as sudo:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo jps
+</pre></div>
+<p>To restart Hadoop in the case that it shuts down, issue the following commands:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>sudo -H -u hadoop <span class="nv">$HADOOP_HOME</span>/sbin/start-dfs.sh
+~<span class="nv">$ </span>sudo -H -u hadoop <span class="nv">$HADOOP_HOME</span>/sbin/start-yarn.sh
+</pre></div>
+<p>The processes should start up again as the dedicated <code>hadoop</code> user and you'll be back on your way!</p>
+
+<h2 id="installing-hive">Installing Hive</h2>
+
+<p>For the most part, installing services on Hadoop (e.g. Hive, HBase, or others) will consist of the following in the environment we have set up:</p>
+
+<ol>
+<li>Download the release tarball of the service</li>
+<li>Unpack the release to <code>/srv/</code> and creating a symlink from the release to a simple name</li>
+<li>Configure environment variables with the new paths</li>
+<li>Configure the service to run in pseudo-distributed mode</li>
+</ol>
+
+<p>Hive also follows this pattern. Find the Hive release you wish to download from the <a href="http://hive.apache.org/downloads.html" target="_blank">Apache Hive downloads page</a>. At the time of this writing, Hive release 0.14.0 is current. Once you have selected a mirror, download the <code>apache-hive-0.14.0-bin.tar.gz</code> file to your <code>downloads</code> directory. Then issue the following commands in the terminal to unpack it:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>tar -xzf apache-hive-0.14.0-bin.tgz
+~<span class="nv">$ </span>sudo mv apache-hive-0.14.0-bin /srv
+~<span class="nv">$ </span>sudo chown -R hadoop:hadoop /srv/apache-hive-0.14.0-bin
+~<span class="nv">$ </span>sudo ln -s /srv/apache-hive-0.14.0-bin /srv/hive
+</pre></div>
+<p>Edit your <code>~/.profile</code> with these environment variables by adding the following to the bottom of the <code>.profile</code>:</p>
+<div class="highlight"><pre><span class="c"># Configure Hive environment</span>
+<span class="nb">export </span><span class="nv">HIVE_HOME</span><span class="o">=</span>/srv/hive
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HIVE_HOME</span>/bin
+</pre></div>
+<p>No other configuration for Hive is required, although you can find other configuration details in <code>HIVE_HOME/conf</code> including the Hive environment shell file and the Hive site configuration XML.</p>
+
+<h2 id="installing-spark">Installing Spark</h2>
+
+<p>Installing Spark is also pretty straight forward, and we'll install it similarly to how we installed Hive. Find the Spark release you wish to download from the <a href="https://spark.apache.org/downloads.html" target="_blank">Apache Spark downloads page</a>. The Spark release at the time of this writing is 1.1.0. You should choose the package type "Pre-built for Hadoop 2.4" and the download type should be "Direct Download". Then unpack it as follows:</p>
+<div class="highlight"><pre>~<span class="nv">$ </span>tar -xzf spark-1.1.0-bin-hadoop2.4.tgz
+~<span class="nv">$ </span>sudo mv spark-1.1.0-bin-hadoop2.4.tgz /srv
+~<span class="nv">$ </span>sudo chown -R hadoop:hadoop /srv/spark-1.1.0-bin-hadoop2.4
+~<span class="nv">$ </span>sudo ln -s /srv/spark-1.1.0-bin-hadoop2.4 /srv/spark
+</pre></div>
+<p>Edit your <code>~/.profile</code> with the following environment variables at the bottom of the file:</p>
+<div class="highlight"><pre><span class="c"># Configure Spark environment</span>
+<span class="nb">export </span><span class="nv">SPARK_HOME</span><span class="o">=</span>/srv/spark
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$SPARK_HOME</span>/bin:<span class="nv">$PATH</span>
+</pre></div>
+<p>After you source your <code>.profile</code> or restart your terminal, you should be able to run a <code>pyspark</code> interpreter locally. You can now use <code>pyspark</code> and <code>spark-submit</code> commands to run Spark jobs.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>At this point you should now have a fully configured Hadoop setup ready for development in pseudo-distributed mode on Ubuntu with HDFS, MapReduce on YARN, Hive, and Spark all ready to go as well as a simple methodology for installing other services.</p>
+
+        </div>
+        <div class="clear"></div>
+        
+        <p class="kaia_name_and_tag true">
+      <a href="http://blog.districtdatalabs.com/">Benjamin Bengfort and Jenny Kim</a>
+  </p>
+
+  <div class="entry_meta_area">
+    <p class="kaia_actions"><span class="entry_date">January 08, 2015</span>
+      <br>
+
+
+              <a class="comment_link fa fa-comment" title="Comment" href="https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment#comment_drawer_top"></a>
+              <a href="https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment#disqus_thread" class="comment_link comment_link_text" data-disqus-identifier="silvrback-districtdatalabs-11071">5 Comments</a>
+          <span class="share_social">
+      </span></p><div class="bottom-subscription bottom-subscription-wrapper">
+  <div>
+    <a class="open_ajax_popup sub-button" href="https://districtdatalabs.silvrback.com/email_subscriptions/new">
+      Subscribe to this Blog
+    </a>
+
+    <div class="search-wrapper">
+  <form accept-charset="UTF-8" action="https://districtdatalabs.silvrback.com/search" id="search-form" method="post" target="_blank"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="BWuTq8tkBb8DP5kPdpUTAJMMZuvT4m59/SRgRx25xv8="></div>
+      <div class="search-form">
+        <input class="search-input" id="term" name="term" placeholder="Search" type="text">
+        <input id="user_id" name="user_id" type="hidden" value="2839">
+        <span class="search-submit">
+         <i class="fa fa-search"></i>
+        </span>
+      </div>
+</form></div>
+<script type="text/javascript">
+    $(function () {
+        var searchInput = $('#search-form .search-input');
+        $('#search-form .search-submit').click(function (e) {
+            search(e, searchInput);
+        });
+
+        searchInput.keypress(function (e) {
+            if (e.keyCode == 13) {
+                search(e, $(this));
+            }
+        });
+
+        var search = function (event, input) {
+            event.preventDefault();
+            search_text = input.val();
+            if (search_text != '' && search_text.length >= 3) {
+                $('#search-form').submit();
+            }
+            else {
+                $('#search-form').find('.search-input').focus();
+            }
+        };
+
+        searchInput.focusin(function () {
+            $('.search-form').addClass('search-active');
+        }).focusout(function () {
+            $('.search-form').removeClass('search-active');
+        });
+    });
+</script>
+  </div>
+
+  <div class="share_social article-bottom-social-share">
+    <span class="social-share-text"> Share </span>
+    <a href="https://districtdatalabs.silvrback.com/articles/11071/shares/new" class="share-email-link">
+        <i class="fa fa-envelope"></i>
+</a>
+    <a href="http://www.twitter.com/share?url=https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment&amp;text=Creating%20a%20Hadoop%20Pseudo-Distributed%20Environment%20%20%20%20%20%20by%20@DistrictDataLab" title="Share this post on Twitter" data-lang="en" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=640,height=300&#39;)"><i class="fa fa-twitter"></i></a>
+
+    <a target="_blank" onclick="return !window.open(this.href, &#39;Facebook&#39;, &#39;width=640,height=300&#39;)" href="http://www.facebook.com/sharer/sharer.php?u=https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment" title="Share this post on Facebook"><i class="fa fa-facebook"></i></a>
+
+    <a href="http://plus.google.com/share?url=https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment" target="_blank" onclick="return !window.open(this.href, &#39;Google +&#39;, &#39;width=640,height=300&#39;)" title="Share this post on Google +"><i class="last_link fa fa-google-plus"></i></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://districtdatalabs.silvrback.com/creating-a-hadoop-pseudo-distributed-environment" onclick="return !window.open(this.href, &#39;LinkedIn&#39;, &#39;width=640,height=300&#39;)" target="_blank" title="Share this post on LinkedIn">
+      <i class="last_link fa fa-linkedin"></i>
+    </a>
+  </div>
+</div>
+
+<div id="email_share_popup" class="white-popup mfp-with-anim mfp-hide">
+  <div class="modal-header">
+    <h1 class="header-title"> Share this article with friends </h1>
+  </div>
+  <div class="modal-body">
+
+  </div>
+</div>
+
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, "script", "twitter-wjs");</script>
+<script type="text/javascript">
+    $(function () {
+        $('.share-email-link').click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: $(this).attr('href'),
+                type: 'get',
+                dataType: 'script'
+            })
+        });
+    });
+</script>
+    
+          <div class="posted_in"><p>Posted in: <a href="https://districtdatalabs.silvrback.com/tags/hadoop">hadoop</a></p></div>
+      </div>
+
+  <script type="text/javascript" charset="utf-8">
+      $(function () {
+          var url = window.location.href;
+          var index = url.indexOf('#');
+          if (index != -1) {
+              var hash = url.substring(index + 1);
+              if ((/comment-/i.test(hash) || /post-/i.test(hash))) {
+                  $('.comment_link:first').trigger('click');
+              }
+          }
+      });
+  </script>
+
+
+
+        
+      </div>
+    </div>
+  </div>
+  
+  <div style="position:relative; z-index:100">
+      <div class="kaia_page kaia_footer_section">
+        <div class="align_center read_next">
+          <h2 class="read_next_btn"><a href="https://districtdatalabs.silvrback.com/simple-csv-data-wrangling-with-python" class="read_next_link" title="Read Next">Read Next: Simple CSV Data Wrangling with Python</a>
+</h2>
+        </div>
+
+        <div class="bottom_menu_links align_center header_background_text">
+          <ul>
+              <li><a href="https://districtdatalabs.silvrback.com/">Blog</a></li>
+<li><a href="https://districtdatalabs.silvrback.com/archive">Archive</a></li>
+  <li><a href="http://districtdatalabs.com/" target="_blank">District Data Labs</a></li>
+<li><a href="https://districtdatalabs.silvrback.com/feed">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kaia_footer">
+        <div class="kaia_page">
+          <div class="bottom_footer_area">
+            <p class="align_center header_background_text">
+              You can also find <i>District Data Labs</i> on <a href="https://twitter.com/DistrictDataLab" class="personal_social_links">Twitter</a>, <a href="https://github.com/DistrictDataLabs" class="personal_social_links">GitHub</a> and <a href="https://facebook.com/DistrictDataLabs" class="personal_social_links">Facebook</a>.
+
+            </p><div class="footer-copy-right">
+              © 2016 <a href="http://blog.districtdatalabs.com/">District Data Labs</a>
+              <br><br>
+                      <a href="https://www.silvrback.com/" title="Proudly Published With Silvrback Blog"><img alt="Gorilla-white" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/gorilla-white-741ea3d1f1fcab17c198f45d894493d6.svg" style="width:40px; margin-top:20px;"></a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+</div>
+</article><div class="comments" id="comment_drawer_top">
+  <div class="article_body">
+    <div class="kaia_page">
+      <p class="comments_x"><a class="fa fa-times comments_close" style="color:#000"></a></p>
+      <div class="article_padding comments_inner">      
+          <div class="align_center disqus">
+    <div id="disqus_thread" style="width:94%; border:1px solid #eee; padding:20px;"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/saved_resource.html" horizontalscrolling="no" verticalscrolling="no" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 3693px !important;"></iframe></div>
+  </div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "districtdatalabs"; // required: replace example with your forum shortname
+    var disqus_identifier = "silvrback-districtdatalabs-11071";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+  
+
+      </div>
+    </div>
+  </div>
+</div><div class="clear"></div><script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "districtdatalabs";; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script><div class="social" style="display: block;">
+    <ul>
+    <li><a href="http://www.twitter.com/DistrictDataLab" target="_blank" title="follow Me"><i class="fa fa-twitter"></i></a></li>
+
+      <li><a href="http://www.facebook.com/DistrictDataLabs" target="_blank" title="follow Me"><i class="fa fa-facebook"></i></a></li>
+
+
+
+
+    <li><a href="http://www.github.com/DistrictDataLabs" target="_blank" title="My GitHub Profile"><i class="fa fa-github"></i></a></li>
+
+
+</ul>
+  </div><script type="text/javascript">
+    $(function () {
+        if ($("a[data-widget-id]").length > 0) {
+            !function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        }
+    });
+</script><script async="" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/widgets.js" charset="utf-8"></script><script type="text/javascript">
+  $(document).ready(function() {
+    //need to fetch the read next btn via js to avoid the cache. Convert to utc. 
+    $.getScript("/home/read_next?date=2015-01-08 14:56:26 UTC&article_id=11071");
+    $('.all_external_links').find('a[href^="http://"], a[href^="https://"]').attr('target', '_blank');
+
+  });
+</script><script type="text/javascript">
+    var _sf_async_config = {uid: 35610, domain: 'silvrback.com', useCanonical: true};
+    (function () {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+            document.body.appendChild(e);
+        };
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function () {
+            oldonload();
+            loadChartbeat();
+        };
+    })();
+
+    $(document).ready(function () {
+        $(".tab_open a").attr("target", "_blank");
+    })
+</script></div>
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+<iframe style="display: none;" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/saved_resource(1).html"></iframe><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/saved_resource(2).html"></iframe><script language="javascript" type="text/javascript" src="./District Data Labs - Creating a Hadoop Pseudo-Distributed Environment_files/chartbeat.js"></script></body></html>
